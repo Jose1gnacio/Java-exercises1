@@ -40,7 +40,7 @@ public class Ejercicio11 {
 
             } else {
                 System.out.println("Por favor introduce número valido");
-                inKilometros.next();
+                inKilometros.next();//  aqui si funciona bien
             }
         }
         while (!disp) {

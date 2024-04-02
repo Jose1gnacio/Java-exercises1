@@ -24,9 +24,9 @@ public class Ejercicio10 {
                 entradaValida = true;
             } else {
                 System.out.println("Por favor ingresa un número entero.");
-                scanner.next(); // Limpia el buffer de entrada
+                scanner.next();
             }
         }
-        scanner.close(); // Cierra el Scanner cuando ya no se necesite
+        scanner.close();
     }
 }
