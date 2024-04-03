@@ -33,34 +33,39 @@ public class Ejercicio11 {
         int kilometros = 0;
 
         while (!km) {
-            System.out.print("Introduce distancia en kilómetros:");
+            System.out.println("Introduce distancia en kilómetros:");
             if (inKilometros.hasNextInt()) {
                 kilometros = inKilometros.nextInt();
                 km = true;
 
             } else {
                 System.out.println("Por favor introduce número valido");
-                inKilometros.next();//  aqui si funciona bien
+                inKilometros.next();
             }
         }
         while (!disp) {
             System.out.println("Esta disponible (Si/No):?");
-            String input = inDisponibilidad.nextLine().trim().toLowerCase();
+            String input = inDisponibilidad.nextLine();//.trim().toLowerCase();
+            System.out.println(input);
+            String in2 = input.trim().toLowerCase();
+            System.out.println(in2);
+
             if (input.equals("si") || input.equals("no")) {
                 disponibilidad = input;
                 disp = true;
             } else {
                 System.out.println("Ingresa Si o No");
-                //inDisponibilidad.next();  por que aqui produce error y en el otro no produce nada
+                inDisponibilidad.next();
             }
         }
         inKilometros.close();
         inDisponibilidad.close();
+
         if (Objects.equals(disponibilidad, "si")) {
             if (kilometros <= 0.5) {
                 System.out.println("Listo para iniciar recorrido");
             } else {
-                System.out.println("Conductor disponible, pero muy lejor, aplicarán tarifas más altas");
+                System.out.println("Conductor disponible, pero muy lejos, aplicarán tarifas más altas");
             }
         } else {
             if (kilometros <= 0.5) {
@@ -69,7 +74,5 @@ public class Ejercicio11 {
                 System.out.println("No hay conductores disponibles");
             }
         }
-
-
     }
 }
