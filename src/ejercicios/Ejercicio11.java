@@ -44,18 +44,18 @@ public class Ejercicio11 {
             }
         }
         while (!disp) {
-            System.out.println("Esta disponible (Si/No):?");
-            String input = inDisponibilidad.nextLine();//.trim().toLowerCase();
+            System.out.println("Esta disponible (si/no):?");
+            String input = inDisponibilidad.nextLine().trim().toLowerCase();
             System.out.println(input);
-            String in2 = input.trim().toLowerCase();
-            System.out.println(in2);
+            //String in2 = input.trim().toLowerCase();
+            //System.out.println(in2);
 
             if (input.equals("si") || input.equals("no")) {
                 disponibilidad = input;
                 disp = true;
             } else {
-                System.out.println("Ingresa Si o No");
-                inDisponibilidad.next();
+                System.out.println("Por favor indique si o no");
+                //inDisponibilidad.next();
             }
         }
         inKilometros.close();
