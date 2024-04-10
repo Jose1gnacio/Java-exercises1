@@ -56,6 +56,7 @@ public class Ejercicio11 {
             } else {
                 System.out.println("Por favor indique si o no");
                 //inDisponibilidad.next();
+                //repasar
             }
         }
         inKilometros.close();
